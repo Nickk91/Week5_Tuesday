@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src=""></script>
+  </head>
+  <body>
+    <!-- Create a webpage that has part of the application
+process for a job. This page should have a text area
+field and a button. Your user must enter at least 100
+characters before clicking the button. If he didn’t, please
+give him the appropriate message. (using alert is
+forbidden -->
+
+    <form>
+      <label for="fname">Why are you interested in this position?</label>
+      <br />
+      <textarea id="input" name="question2" cols="50" rows="5" maxlength="250">
+      </textarea>
+      <button id="button">submit</button>
+      <p id="output"></p>
+      ;
+      <script>
+        const button = document.querySelector("#button");
+        const input = document.querySelector("#input");
+        const output = document.querySelector("#output");
+
+        function updateOutput(message) {
+          output.innerText = message;
+        }
+
+        button.addEventListener("click", function (event) {
+          event.preventDefault();
+          console.log(input.value);
+          if (input.value.length < 100) {
+            output.innerText = `You must enter at least 100 characters before clicking the button`;
+          } else {
+            output.innerText = `Thank you`;
+          }
+        });
+      </script>
+    </form>
+  </body>
+</html>

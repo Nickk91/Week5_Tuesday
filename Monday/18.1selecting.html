@@ -1,0 +1,71 @@
+<!-- Front-end development: Elements
+JavaScript – Selecting elements
+The following exercise contains the following subjects:
+● DOM
+Instructions
+Copy this HTML file (next page) -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,
+initial-scale=1.0"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Header</h1>
+    <p>Paragraph</p>
+    <a href="#">link</a>
+    <img src="" alt="" />
+    <div class="x">Div with a class</div>
+    <div id="y">Div with an id</div>
+    <input type="text" />
+    <input type="text" />
+    <input type="text" />
+  </body>
+  <script>
+    //1. Select all elements not using the querySelector method.
+    console.log(document.getElementsByTagName("h1"));
+    console.log(document.getElementsByTagName("a"));
+    console.log(document.getElementsByTagName("p"));
+    console.log(document.getElementsByTagName("a"));
+    console.log(document.getElementsByTagName("img"));
+    console.log(document.getElementsByTagName("div"));
+    console.log(document.getElementsByTagName("input"));
+
+    //2. Select all elements using querySelector method.
+    let h1Select = document.querySelectorAll("h1");
+    let pSelect = document.querySelectorAll("p");
+    let aSelect = document.querySelectorAll("a");
+    let imgSelect = document.querySelectorAll("img");
+    let divSelect = document.querySelectorAll("div");
+    let inputSelect = document.querySelectorAll("input");
+    console.log(pSelect);
+//     3. Select all inputs and iterate over them with the forEach
+// method and print each one to the console. Using both
+// querySelectorAll and getElementsByTagName. --
+let input = document.getElementsByTagName("input");
+
+
+    const loop2 = [...input];
+    loop2.forEach((element) => {
+      console.log(element);
+    });
+
+    let array = Array.from(input);
+    array.forEach((loop) => console.log(loop));
+    let input2 = document.querySelectorAll("input");
+    input2.forEach((loop2)=>console.log(loop2));
+    
+  </script>
+</html>
+<!-- inside the script tag do the following:
+Select all elements inside the body and store each element in a
+separate variable and print them to the console.
+
+
+>

@@ -1,0 +1,53 @@
+<!-- Front-end development:
+Basics
+JavaScript – functions
+The following exercise contains the following subjects:
+
+On the next page, you have the HTML code -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0" />
+<title>Document</title>
+<script src=>
+  // 1. Change the text from "title 2" to "main title"
+  const startHereElement = document.querySelector(".start-here");
+  startHereElement.textContent = "main title";
+//   document.querySelector('.start-here').textContent = "main title";
+  
+
+  // 2. Add another subtitle with the text "subtitle 4"
+  const subtitle4 = document.createElement("li");
+  subtitle4.textContent = "subtitle 4";
+  startHereElement.nextElementSibling.querySelector("ul").appendChild(subtitle4);
+
+  // 3. Delete the last <li> element from the list
+  const lastLiElement = document.querySelector("ul > li:last-child");
+  lastLiElement.remove();
+
+  // 4. Change the <title> element text to "Master Of The Dom"
+  document.title = "Master Of The Dom";
+
+</script>
+</head>
+<body>
+<ul>
+    <li>title 1</li>
+    <li class="start-here">title 2</li>
+    <li>
+        <ul>
+            <li>sub title 1</li>
+            <li>sub title 2</li>
+            <li>sub title 3</li>
+        </ul>
+    </li>
+    <li>title 3</li>
+</ul>
+<div>
+<p>Hello World!</p>
+</div>
+</body>
+</html>
+

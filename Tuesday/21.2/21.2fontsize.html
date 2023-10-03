@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src=></script>
+    <style>
+    p{
+        display: inline-block;
+    }
+    
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button id="plus">+</button>
+      <button id="minus">-</button>
+    </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates inventore architecto qui quaerat, in est!</p>
+    <script>
+        let p = document.querySelector("p");
+        let size = 16;
+        let plus = document.querySelector("#plus");
+        let minus = document.querySelector("#minus");
+    
+      function sizeIncrease() {
+        if (size === 99) {
+          return;
+        }
+        size += 1;
+        p.style.fontSize = `${size}px`;
+        console.log(p.style.fontSize);
+      }
+
+      function sizeDecrease() {
+        if (size === 7) {
+          return;
+        }
+        size -= 1;
+        p.style.fontSize = `${size}px`;
+        console.log(p.style.fontSize);
+      }
+
+      plus.addEventListener("click", sizeIncrease);
+      minus.addEventListener("click", sizeDecrease);
+
+
+      </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <label for="age">How old are you?:</label><br />
+      <input type="number" id="ageInput" name="fname" /><br />
+      <button id="button">submit</button>
+      <p id="output"></p>
+    </form>
+    <script>
+      const btn = document.getElementById("button");
+      const input = document.querySelector("#ageInput");
+
+      const output = document.getElementById("output");
+
+      function updateOutput(message) {
+        output.innerText = message;
+      }
+
+      btn.addEventListener("click", function (event) {
+        event.preventDefault();
+        console.log(input.value);
+        if (input.value < 18) {
+          output.innerText = `you're too young`;
+        } else {
+          output.innerText = `you can drink`;
+        }
+      });
+    </script>
+  </body>
+</html>
